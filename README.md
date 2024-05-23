@@ -1,34 +1,19 @@
-Pico
-====
+# WTC 2019 microsite
 
-[![License](https://picocms.github.io/badges/pico-license.svg)](https://github.com/picocms/pico-composer/blob/master/LICENSE)
-[![Version](https://picocms.github.io/badges/pico-version.svg)](https://github.com/picocms/pico-composer#install)
-[![Freenode IRC Webchat](https://picocms.github.io/badges/pico-chat.svg)](https://webchat.freenode.net/?channels=%23picocms)
-[![Open Bounties on Bountysource](https://www.bountysource.com/badge/team?team_id=198139&style=bounties_received)](https://www.bountysource.com/teams/picocms)
+This is the microsite that was set up for the participation of the Swiss teams to the World Tchoukball Championships 2019.
 
-Pico is a stupidly simple, blazing fast, flat file CMS.
+It used to be on https://wtc2019.tchoukball.ch, but was decommissioned. The content was moved to the new website of Swiss Tchoukball on http://tchoukball.ch/equipes-nationales/competitions/wtc2019 and http://tchoukball.ch/equipes-nationales/competitions/wytc2019.
 
-Visit us at http://picocms.org/ and see http://picocms.org/about/ for more info.
+## Requirements
 
-This is Pico's [Composer][] starter project. `picocms/pico-composer` is the frame for basically all Pico installations starting with Pico 2.0, but doesn't consist of any considerable code itself. It's main purpose is to simply depend on Pico. Please refer to the ["Install"][MainRepoInstall] and ["Upgrade"][MainRepoUpgrade] sections of our main repository for information about how to install, upgrade and use Pico.
+This microsite uses [Pico](http://picocms.org/) as CMS, “_a stupidly simple, blazing fast, flat file CMS_”.
 
-Screenshot
-----------
+It is PHP-based. Therefore it is required to have PHP installed, as well a [composer](https://getcomposer.org/).
 
-![Pico Screenshot](https://picocms.github.io/screenshots/pico-20.png)
+## Setup
 
-Getting Help
-------------
+### Install dependencies
 
-Please refer to the ["Getting Help" section][MainRepoGettingHelp] of our main repository.
-
-Contributing
-------------
-
-Please refer to the ["Contributing" section][MainRepoContributing] of our main repository.
-
-[Composer]: https://getcomposer.org/
-[MainRepoInstall]: https://github.com/picocms/Pico#install
-[MainRepoUpgrade]: https://github.com/picocms/Pico#upgrade
-[MainRepoGettingHelp]: https://github.com/picocms/Pico#getting-help
-[MainRepoContributing]: https://github.com/picocms/Pico#contributing
+```
+php composer.phar install
+```
