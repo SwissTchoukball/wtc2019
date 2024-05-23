@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+    {% if meta.description %}
+        <meta name="description" content="{{ meta.description|striptags }}" />
+    {% endif %}{% if meta.robots %}
+        <meta name="robots" content="{{ meta.robots }}" />
+    {% endif %}
+
+    {% if current_page %}
+        <link rel="canonical" href="{{ current_page.url }}" />
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ theme_url }}/css/style.css?v=4" type="text/css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800&display=swap">
+    <link rel="stylesheet" href="{{ theme_url }}/css/fontello.css" type="text/css" />
+    <!-- Matomo -->
+    <script type="text/javascript">
+      var _paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//analytics.tchoukball.ch/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+</head>
+<body class="st-press-release">
+<header>
+	<nav class="st-pr-header__actions">
+		<a href="./" class="st-pr-header__back">{% if meta.lang == "fr" %}Retour{% endif %}{% if meta.lang == "de" %}Zurück{% endif %}</a>
+		{% if meta.german %}
+		<a href="{{meta.german}}">Auf Deutsch</a>
+        {% endif %}
+		{% if meta.french %}
+		<a href="{{meta.french}}">En français</a>
+        {% endif %}
+		<button onClick="javascript:window.print()" class="st-pr-header__print st-button-link">{% if meta.lang == "fr" %}Imprimer{% endif %}{% if meta.lang == "de" %}Drucken{% endif %}</button>
+	</nav>
+	<img src="{{ theme_url }}/images/logo_swisstchoukball.svg" alt="Logo de Swiss Tchoukball" class="st-pr-header__logo">
+	<h1 class="st-pr-header__title">{% if meta.lang == "fr" %}Communiqué de presse{% endif %}{% if meta.lang == "de" %}Medienmitteilung{% endif %}</h1>
+	<div class="st-pr-header__date">{{ meta.date }}</div>
+</header>
+<main class="st-pr-main">{{ content }}</main>
+<footer class="st-pr-footer">
+	<address class="st-pr-footer__address">
+		Swiss Tchoukball - 1000 Lausanne<br/>
+		<a href="mailto:info@tchoukball.ch">info@tchoukball.ch</a> - <a href="https://tchoukball.ch" target="_blank">tchoukball.ch</a>
+	</address>
+</footer>
+</body>
+</html>
